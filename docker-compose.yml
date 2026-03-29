@@ -1,0 +1,13 @@
+services:
+  http-wakeonlan:
+    build: .
+    container_name: http-wakeonlan
+    ports:
+      - "8080:8080"
+    environment:
+      AUTH_KEY: "super-secret-token"
+      TARGET_MAC: "AA:BB:CC:DD:EE:FF"
+      RESPONSE_MESSAGE: "Wake-on-LAN packet sent"
+      HOST: "0.0.0.0"
+      PORT: "8080"
+    restart: unless-stopped
