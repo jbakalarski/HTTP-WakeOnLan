@@ -7,6 +7,8 @@ services:
     environment:
       AUTH_KEY: "super-secret-token"
       TARGET_MAC: "AA:BB:CC:DD:EE:FF"
+      WOL_DESTINATION_IP: "255.255.255.255"
+      WOL_PORT: "9"
       RESPONSE_MESSAGE: "Wake-on-LAN packet sent"
       HOST: "0.0.0.0"
       PORT: "8080"
